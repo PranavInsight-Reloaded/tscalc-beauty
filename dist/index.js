@@ -30,7 +30,7 @@ function addOperator(op) {
     document.querySelectorAll('.operator').forEach(btn => {
         btn.classList.remove('selected');
     });
-    const target = event === null || event === void 0 ? void 0 : event.target;
+    const target = event === null || event === void 0 ? void 0 : event.target; // Potential issue: event is not defined.
     if (target && target.classList) {
         target.classList.add('selected');
     }
@@ -86,6 +86,15 @@ function toggleSign() {
 function percentage() {
     currentInput = (parseFloat(currentInput) / 100).toString();
     updateDisplay();
+}
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+    console.log("Dark mode toggled");
+}
+// Event listener for the dark mode switch
+if (checkbox) {
+    checkbox.addEventListener("change", toggleDarkMode);
 }
 // Initialize display
 updateDisplay();

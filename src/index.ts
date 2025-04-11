@@ -32,7 +32,7 @@ function addOperator(op: string): void {
   document.querySelectorAll('.operator').forEach(btn => {
     btn.classList.remove('selected');
   });
-  const target = event?.target as HTMLElement | null;
+  const target = event?.target as HTMLElement | null; // Potential issue: event is not defined.
   if (target && target.classList) {
     target.classList.add('selected');
   }
@@ -98,6 +98,15 @@ function percentage(): void {
   currentInput = (parseFloat(currentInput) / 100).toString();
   updateDisplay();
 }
+function toggleDarkMode(): void {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+  console.log("Dark mode toggled");
+}
 
+// Event listener for the dark mode switch
+if (checkbox) {
+  checkbox.addEventListener("change", toggleDarkMode);
+}
 // Initialize display
 updateDisplay();
