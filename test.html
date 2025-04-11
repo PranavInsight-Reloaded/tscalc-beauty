@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch-label" for="checkbox">Dark Mode</label>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <script>
+      const checkbox = document.getElementById("checkbox");
+      if (checkbox) {
+        console.log("Checkbox found!", checkbox);
+      } else {
+        console.log("Checkbox not found!");
+      }
+    </script>
+</body>
+</html>
