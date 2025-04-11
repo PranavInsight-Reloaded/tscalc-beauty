@@ -12,3 +12,4 @@ This calc is pretty decent and can do simple math calculations, except its free 
 - Add theme switch(The latest feature gonna be released)🌇🌆.
 - Learn more like this(I like typescript)⌨️🖱️
 - Improve the design...😄
+- Bug fixes, updates and even more.
