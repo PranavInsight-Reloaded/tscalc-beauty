@@ -7,6 +7,6 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["src/**/*"], // Where your TS files live
+  "include": ["src/**/*", "dist/settings.js", "dist/bank-calculator.js", "dist/glass-calculator.js", "src/bankcalc.js", "src/bankcalc.ts"], // Where your TS files live
   "exclude": ["node_modules", "dist"]
 }

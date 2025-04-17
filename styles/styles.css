@@ -31,7 +31,24 @@ body {
     font-weight: 300;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+.button-switch{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.button-switch .btn{
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--btn-clr);
+}
+.button-switch .btn:hover{
+  box-shadow: 0 10px 30px var(--btn-clr);
+  transition: 0.5s
+}
+.button-switch .btn a{
+  text-decoration: none;
+  color: var(--color);
+  text-align: center;
+}
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -56,6 +73,7 @@ button {
 
 button:active {
     opacity: 0.7;
+    
 }
 
 button.operator {
@@ -66,6 +84,7 @@ button.operator {
 button.operator.selected {
     background: white;
     color: #ff9500;
+    border-color: var(--button-op-border);
 }
 
 button.function {
@@ -97,7 +116,7 @@ button.equals {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
   justify-content: flex-end; /* Push switch to the right */
 }
 
@@ -157,25 +176,44 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.back{
+  margin-right: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0rem;
+  border-radius: 1rem;
+  background-color: var(--button-bg);
+  color: var(--display-color);
+}
+.back a{
+  color: var(--color);
+  background-color: var(--button-bg);
+}
 
 :root {
-    --body-bg: #fff;
-    --calculator-bg: #fff;
-    --display-bg: #fff;
-    --display-color: #000;
-    --button-bg: #d3d3d3;
-    --button-color: #fff;
-    --operator-bg: #ff9500;
-    --operator-color: #fff;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+  --body-bg: #fff;
+  --calculator-bg: #fff;
+  --display-bg: #fff;
+  --display-color: #000;
+  --button-bg: #d3d3d3;
+  --button-color: #fff;
+  --operator-bg: #ff9500;
+  --operator-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --background-change-color: #d3d3d3;
+  --btn-clr: rgb(0, 236, 236);
+  --button-op-border: white;
 }
 
 .dark-mode {
-    --body-bg: #000;
-    --calculator-bg: #1a1a1a;
-    --display-bg: #1a1a1a;
-    --display-color: #fff;
-    --button-bg: #4d4d4d;
-    --button-color: #fff;
-    --shadow-color: rgba(255, 255, 255, 0.1);
+  --body-bg: #000;
+  --calculator-bg: #1a1a1a;
+  --display-bg: #1a1a1a;
+  --display-color: #fff;
+  --button-bg: #4d4d4d;
+  --button-color: #fff;
+  --shadow-color: rgb(255, 255, 255);
+  --background-change-color: #4d4d4d;
+  --btn-clr: rgb(0, 160, 160);
+  --button-op-border: black;
 }

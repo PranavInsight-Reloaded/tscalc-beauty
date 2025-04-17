@@ -3,7 +3,8 @@ let previousInput: string = '';
 let operation: string | null = null;
 let resetInput: boolean = false;
 const display = document.getElementById('display') as HTMLInputElement | null;
-
+const calculatorContainer = document.getElementById("calculator-container") as HTMLDivElement;
+const backgroundUrlInput = document.getElementById("background-url") as HTMLInputElement;
 function updateDisplay(): void {
   if (display) {
     display.value = currentInput;
@@ -108,6 +109,15 @@ function toggleDarkMode(): void {
 if (checkbox) {
   checkbox.addEventListener("change", toggleDarkMode);
 }
+
+function changeBackgroundImage(): void {
+  const imageUrl: string = backgroundUrlInput.value;
+  calculatorContainer.style.backgroundImage = `url('${imageUrl}')`;
+  backgroundUrlInput.value = ""; // Optionally clear the input field
+}
+
 // Initialize display
 updateDisplay();
+
+(window as any).changeBackgroundImage = changeBackgroundImage;
 

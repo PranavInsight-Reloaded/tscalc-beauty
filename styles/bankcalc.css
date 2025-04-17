@@ -1,0 +1,218 @@
+/* iOS Calculator Styling with Dark Mode */
+:root {
+  --background-color: #fff;
+  --color: #000;
+  --webpage-color: #f2f2f7;
+  --shadow-color: 0 10px 30px rgba(0,0,0,0.1);
+  --disp-color: #f7f7f7;
+  --input-color: #000;
+  --label-color: #666;
+  --button-gray: #a5a5a5;
+  --button-orange: #ff9500;
+}
+
+.dark-mode {
+  --background-color: #1c1c1e;
+  --color: #fff;
+  --webpage-color: #000;
+  --shadow-color: 0 10px 30px rgba(255,255,255,0.1);
+  --disp-color: #2c2c2e;
+  --input-color: #fff;
+  --label-color: #aaa;
+  --button-gray: #4a4a4a;
+  --button-orange: #ff9f0a;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--webpage-color);
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.ios-calculator {
+  width: 320px;
+  background: var(--background-color);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.tabs {
+  display: flex;
+ 
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  border:#f2f2f7;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color);
+}
+
+.tab-btn.active {
+  background: var(--background-color);
+  border-bottom: 3px solid var(--button-orange);
+  
+}
+.tab-btn.red {
+  background: var(--background-color);
+}
+
+.tab-btn.red:hover{
+  border-bottom: 3px solid red;
+  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.display {
+  padding: 20px;
+  background: var(--disp-color);
+  border-radius: 16px;
+  margin: 20px;
+  text-align: center;
+  color: var(--color);
+  overflow: auto;
+}
+
+.result {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.input-grid {
+  padding: 15px;
+  width: 82%;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+.warning-txt:hover{
+  color: red;
+  cursor: pointer;
+}
+.input-group label {
+  display: block;
+  color: var(--label-color);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid var(--disp-color);
+  border-radius: 10px;
+  background: var(--disp-color);
+  color: var(--input-color);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gray {
+  background: var(--button-gray);
+  color: white;
+}
+
+.orange {
+  background: var(--button-orange);
+  color: white;
+}
+
+.results {
+  padding: 20px;
+  border-top: 1px solid var(--disp-color);
+  color: var(--color);
+}
+
+.results div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.results span:last-child {
+  font-weight: 500;
+}
+
+/* Theme Switch Styling */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px 15px 0 0;
+}
+.theme-switch-label {
+  margin-right: 10px; /* Add space between label and switch */
+  color: var(--color);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--button-orange);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
