@@ -16,5 +16,5 @@ This calc is pretty decent and can do simple math calculations, except its free 
 - Turn it into an app(Not planned yet)📱🖥️.
 - Add theme switch(The latest feature gonna be released)🌇🌆. ✅
 - Learn more like this(I like typescript)⌨️🖱️
-- Improve the design...😄
+- Improve the design...😄 ☑️(Only the financial calculator)
 - Bug fixes, updates and even more. ✅
