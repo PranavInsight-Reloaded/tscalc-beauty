@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank EMI Calculator</title>
+    <link rel="stylesheet" href="styles/bankcalc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <div class="ios-calculator">
+        <!-- Theme Toggle -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch-label" for="checkbox">Dark Mode</label>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn red"><a href='index.html' style="text-decoration: none;color:var(--color);">Back</a></button>
+            <button class="tab-btn active" onclick="openTab('fd')">FD</button>
+            <button class="tab-btn"><a href="rdcalc.html" style="text-decoration: none;color:var(--color);">RD</a></button>
+        </div>
+
+        <!-- FD Calculator -->
+        <div id="fd" class="tab-content" style="display: block;">
+            <div class="display">
+                <div class="result" id="fdResult">₹0</div>
+            </div>
+            <div class="results">
+                <div>
+                    <span>Maturity Value:</span>
+                    <span id="fdMaturity">₹0</span>
+                </div>
+                <div>
+                    <span>Interest Earned:</span>
+                    <span id="fdInterest">₹0</span>
+                </div>
+            </div>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label>Principal (₹)</label>
+                    <input type="number" id="fdPrincipal" placeholder="E.g. 500000">
+                </div>
+                <div class="input-group">
+                    <label>Interest Rate (%)</label>
+                    <input type="number" id="fdRate" placeholder="E.g. 7.5">
+                </div>
+                <div class="input-group">
+                    <label>Tenure (Years)</label>
+                    <input type="number" id="fdTenure" placeholder="E.g. 5">
+                </div>
+            </div>
+            <div class="button-grid">
+                <button class="gray" onclick="resetFD()">AC</button>
+                <button class="orange" onclick="calculateFD()">Calculate</button>
+            </div>
+            
+        </div>
+<hr>
+        <h3 style="color: #fff;font-size: medium;text-align: center;">🛈
+            Note: FD maturity can vary with compounding frequency. Use your bank's official calculator for the exact amount.
+
+            </h3>
+        
+    </div>
+</div>
+</div>
+<script src="dist/bankcalc.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",    // Crucial for finding source files
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*", "dist/settings.js", "dist/bank-calculator.js", "dist/glass-calculator.js", "src/bankcalc.js", "src/bankcalc.ts"], // Where your TS files live
+  "exclude": ["node_modules", "dist"]
+}

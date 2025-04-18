@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="styles/bankcalc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <div class="ios-calculator">
+        <div class="theme-switch-wrapper">
+            <span class="theme-switch-label">🌙/☀️</span>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle-emi">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="display">
+            <div class="result" id="emiResult">₹0</div>
+        </div>
+        <div class="input-grid">
+            <div class="input-group">
+                <label>Loan Amount (₹)</label>
+                <input type="number" id="emiPrincipal" placeholder="E.g. 1000000">
+            </div>
+            <div class="input-group">
+                <label>Interest Rate (%)</label>
+                <input type="number" id="emiRate" placeholder="E.g. 8.0">
+            </div>
+            <div class="input-group">
+                <label>Loan Tenure (Years)</label>
+                <input type="number" id="emiTenure" placeholder="E.g. 10">
+            </div>
+        </div>
+        <div class="button-grid">
+            <button class="gray" onclick="resetEMI()">AC</button>
+            <button class="orange" onclick="calculateEMI()">Calculate</button>
+        </div>
+        <div class="results">
+            <div>
+                <span>Monthly EMI:</span>
+                <span id="emiMonthly">₹0</span>
+            </div>
+            <div>
+                <span>Total Interest:</span>
+                <span id="emiTotalInterest">₹0</span>
+            </div>
+            <div>
+                <span>Total Payment:</span>
+                <span id="emiTotalPayment">₹0</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="dist/bankcalc.js"></script>
+</body>
+</html>
